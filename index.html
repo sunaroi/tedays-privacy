@@ -31,8 +31,8 @@
 
 <p>TEdays(이하 "앱")는 Sunaroi가 만든 생리 주기 기록 앱입니다. 이 방침은 앱이 다루는 정보와 그 처리 방식을 설명합니다.</p>
 
-<h2>1. 개발자가 수집하는 정보</h2>
-<p>없습니다. 앱에는 회원가입이 없고, 이용자가 기록한 정보를 개발자나 외부 서버로 보내지 않습니다. 광고, 이용 분석, 오류 보고 도구도 쓰지 않습니다.</p>
+<h2>1. 개발자에게 전달되는 정보</h2>
+<p>앱은 이용자가 기록한 정보를 개발자나 외부 서버로 보내지 않습니다. 앱에는 회원가입이 없고, 광고, 이용 분석, 오류 보고 도구도 쓰지 않습니다. 생리 예정 알림은 기기 안에서 예약하며 푸시 서버를 쓰지 않습니다. 후원 결제 때 Google Play가 개발자에게 제공하는 주문 정보는 3항에서 설명합니다.</p>
 
 <h2>2. 기기에 저장되는 정보</h2>
 <p>이용자가 입력한 다음 정보는 이용자의 기기 안에만 저장됩니다.</p>
@@ -41,28 +41,37 @@
   <li>일별 기록: 출혈량, 증상, 기분, 체중, 기초체온, 메모</li>
   <li>알림 설정</li>
 </ul>
-<p>이 정보는 다음 생리 예측, 달력과 통계 표시, 생리 예정 알림에만 쓰입니다.</p>
+<p>이 정보는 다음 생리 예측, 배란일과 가임기 추정, 달력과 통계 표시, 생리 예정 알림에만 쓰입니다.</p>
 
 <h2>3. 정보가 기기 밖으로 나가는 경우</h2>
 <ul>
   <li><strong>데이터 내보내기</strong>: 이용자가 설정에서 "데이터 내보내기"를 누르면 기록을 담은 파일을 만들어 이용자가 고른 앱(메일, 클라우드 드라이브 등)으로 넘깁니다. 그 뒤의 처리는 이용자가 고른 서비스의 방침을 따릅니다.</li>
-  <li><strong>Android 백업</strong>: 기기에서 Google 백업이 켜져 있으면 Android가 앱 데이터를 이용자의 Google 계정에 백업할 수 있습니다. 이 백업은 Google이 처리하며 개발자는 볼 수 없습니다. 기기 설정에서 끌 수 있습니다.</li>
-  <li><strong>후원 결제</strong>: 후원은 Google Play 결제로 처리되며 결제 정보는 Google이 다룹니다. 개발자는 Google Play가 제공하는 주문 정보만 받습니다. 앱의 기록은 결제와 함께 전송되지 않습니다.</li>
+  <li><strong>Android 백업과 기기 간 전송</strong>: 기기에서 Google 백업이 켜져 있으면 Android가 앱 데이터를 이용자의 Google 계정에 백업할 수 있고, 새 기기로 옮길 때 함께 전송될 수 있습니다. 이 과정은 Google과 Android가 처리하며 개발자는 볼 수 없습니다. 기기 설정에서 끌 수 있습니다.</li>
+  <li><strong>후원 결제</strong>: 후원은 Google Play 결제로 처리되며 결제 정보는 Google이 다룹니다. 개발자는 Google Play가 제공하는 주문 정보(주문 번호, 상품, 금액 등)만 받습니다. 앱의 기록은 결제와 함께 전송되지 않습니다.</li>
 </ul>
+<p>"데이터 가져오기"는 이용자가 고른 백업 파일을 읽어 앱의 기록을 그 내용으로 바꿉니다. 파일 내용을 기기 밖으로 보내지 않습니다.</p>
 
 <h2>4. 사용하는 권한</h2>
 <ul>
-  <li><strong>알림</strong>: 생리 예정일 알림을 보내는 데 씁니다. 허용하지 않아도 다른 기능은 그대로 쓸 수 있습니다.</li>
+  <li><strong>알림</strong>: 생리 예정일 알림을 보내는 데 씁니다. 기기를 다시 켠 뒤에도 예약한 알림을 유지하고 알림 때 진동을 울리는 권한도 함께 씁니다. 알림을 허용하지 않아도 다른 기능은 그대로 쓸 수 있습니다.</li>
   <li><strong>인터넷</strong>: Google Play 결제(후원)에만 씁니다.</li>
 </ul>
 
-<h2>5. 보관과 삭제</h2>
-<p>기록은 이용자가 지울 때까지 기기에 남습니다. 설정의 "데이터 초기화"로 모든 기록을 지울 수 있고, 앱을 삭제해도 지워집니다. 개발자 쪽에는 보관하는 정보가 없습니다.</p>
+<h2>5. 정보 보호</h2>
+<p>기록은 다른 앱이 접근할 수 없는 앱 전용 저장공간에 저장됩니다. 앱이 기록을 따로 암호화하지는 않으므로 기기의 화면 잠금을 사용하시길 권합니다. 내보낸 파일은 암호화되지 않으므로 보관하는 곳에 주의해주세요.</p>
 
-<h2>6. 방침의 변경</h2>
+<h2>6. 보관과 삭제</h2>
+<p>기록은 이용자가 지울 때까지 기기에 남습니다. 설정의 "데이터 초기화"로 앱의 기록을 모두 지울 수 있고, 앱을 삭제해도 지워집니다. 다만 다음은 따로 남을 수 있습니다.</p>
+<ul>
+  <li>데이터 내보내기·가져오기 때 만든 파일이 앱의 임시 저장공간에 남을 수 있습니다. 앱을 삭제하면 함께 지워집니다.</li>
+  <li>Android 백업이 켜져 있으면 Google 계정의 백업본은 앱을 삭제해도 남아, 앱을 다시 설치할 때 복원될 수 있습니다. 백업본은 Google 계정이나 기기 설정에서 지울 수 있습니다.</li>
+</ul>
+<p>개발자가 따로 보관하는 이용자 정보는 없습니다(후원 주문 정보는 Google Play가 보관합니다).</p>
+
+<h2>7. 방침의 변경</h2>
 <p>방침이 바뀌면 이 페이지에 새 시행일과 함께 게시합니다.</p>
 
-<h2>7. 문의</h2>
+<h2>8. 문의</h2>
 <p>이메일: <a href="mailto:sunaroi.kr@gmail.com">sunaroi.kr@gmail.com</a></p>
 
 <hr>
@@ -71,10 +80,10 @@
 <h1>TEdays Privacy Policy</h1>
 <p class="date">Effective date: November 19, 2026</p>
 
-<p>TEdays (the "app") is a period tracking app made by Sunaroi. This policy explains what information the app handles and how.</p>
+<p>TEdays (the "app") is a period tracking app made by Sunaroi. This policy explains what information the app handles and how. The app's interface is currently available in Korean only, so menu names are given in Korean with an English translation.</p>
 
-<h2>1. Information the developer collects</h2>
-<p>None. The app has no account sign-up, and it does not send the information you record to the developer or to any external server. It uses no advertising, usage analytics, or crash reporting tools.</p>
+<h2>1. Information sent to the developer</h2>
+<p>The app does not send the information you record to the developer or to any external server. The app has no account sign-up, and it uses no advertising, usage analytics, or crash reporting tools. Period reminders are scheduled on your device and do not use a push server. The order information that Google Play provides to the developer when you make a donation is described in section 3.</p>
 
 <h2>2. Information stored on your device</h2>
 <p>The following information you enter is stored only on your device:</p>
@@ -83,28 +92,37 @@
   <li>Daily logs: flow, symptoms, mood, weight, basal body temperature, and notes</li>
   <li>Reminder settings</li>
 </ul>
-<p>This information is used only to predict your next period, show the calendar and statistics, and send period reminders.</p>
+<p>This information is used only to predict your next period, estimate ovulation and the fertile window, show the calendar and statistics, and send period reminders.</p>
 
 <h2>3. When information leaves your device</h2>
 <ul>
-  <li><strong>Data export</strong>: When you tap "Export data" in Settings, the app creates a file with your records and hands it to the app you choose (email, cloud drive, etc.). From then on, the file is handled under the policy of the service you chose.</li>
-  <li><strong>Android backup</strong>: If Google backup is turned on for your device, Android may back up the app's data to your Google account. This backup is handled by Google, and the developer cannot see it. You can turn it off in your device settings.</li>
-  <li><strong>Donations</strong>: Donations are processed through Google Play billing, and payment information is handled by Google. The developer receives only the order information that Google Play provides. Your records are not sent with a payment.</li>
+  <li><strong>Data export</strong>: When you tap "데이터 내보내기" (Export data) in Settings (설정), the app creates a file with your records and hands it to the app you choose (email, cloud drive, etc.). From then on, the file is handled under the policy of the service you chose.</li>
+  <li><strong>Android backup and device transfer</strong>: If Google backup is turned on for your device, Android may back up the app's data to your Google account, and it may be transferred when you move to a new device. This is handled by Google and Android, and the developer cannot see it. You can turn it off in your device settings.</li>
+  <li><strong>Donations</strong>: Donations are processed through Google Play billing, and payment information is handled by Google. The developer receives only the order information that Google Play provides (such as order number, product, and amount). Your records are not sent with a payment.</li>
 </ul>
+<p>"데이터 가져오기" (Import data) reads the backup file you choose and replaces the app's records with its contents. The file's contents are not sent off your device.</p>
 
 <h2>4. Permissions</h2>
 <ul>
-  <li><strong>Notifications</strong>: Used to send period reminders. If you do not allow them, every other feature still works.</li>
+  <li><strong>Notifications</strong>: Used to send period reminders, together with the permissions to keep scheduled reminders after the device restarts and to vibrate for a reminder. If you do not allow notifications, every other feature still works.</li>
   <li><strong>Internet</strong>: Used only for Google Play billing (donations).</li>
 </ul>
 
-<h2>5. Retention and deletion</h2>
-<p>Your records stay on your device until you delete them. You can delete all records with "Reset data" in Settings, and they are also deleted when you uninstall the app. The developer stores no information about you.</p>
+<h2>5. Data protection</h2>
+<p>Your records are stored in the app's private storage, which other apps cannot access. The app does not add its own encryption to your records, so we recommend using a screen lock on your device. Exported files are not encrypted, so please be careful where you keep them.</p>
 
-<h2>6. Changes to this policy</h2>
+<h2>6. Retention and deletion</h2>
+<p>Your records stay on your device until you delete them. You can delete all of the app's records with "데이터 초기화" (Reset data) in Settings, and they are also deleted when you uninstall the app. However, the following may remain:</p>
+<ul>
+  <li>Files created by data export or import may remain in the app's temporary storage. They are deleted when you uninstall the app.</li>
+  <li>If Android backup is on, the backup in your Google account remains after you uninstall the app and may be restored when you reinstall it. You can delete the backup from your Google account or device settings.</li>
+</ul>
+<p>The developer keeps no information about you (donation order information is kept by Google Play).</p>
+
+<h2>7. Changes to this policy</h2>
 <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
 
-<h2>7. Contact</h2>
+<h2>8. Contact</h2>
 <p>Email: <a href="mailto:sunaroi.kr@gmail.com">sunaroi.kr@gmail.com</a></p>
 </section>
 </body>
